@@ -1,0 +1,503 @@
+@charset "UTF-8";
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not() {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  font-size: 62.5%;
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: #333;
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  font-size: 1.6rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.page_head {
+  position: relative;
+  margin: 20px 0 40px;
+  padding: 0.5em 1em 0.5em 1.5em;
+  border: 1px solid #aaa;
+  color: #2e001f;
+  font-size: 2.4rem;
+  font-weight: normal;
+}
+
+.page_head::before {
+  position: absolute;
+  top: 50%;
+  left: 0.75em;
+  transform: translateY(-50%);
+  content: "";
+  width: 6px;
+  height: calc(100% - 0.5em * 2);
+  border-radius: 6px;
+  background: #ff19be;
+}
+
+.exp {
+  margin: 0 0 40px;
+}
+
+.exp p {
+  margin-bottom: 1em;
+}
+
+.exp .link {
+  margin-bottom: 2em;
+}
+
+.exp .link li {
+  margin-bottom: 0.5em;
+}
+
+.exp .link a {
+  padding: 0 0.2em;
+  background: linear-gradient(transparent 40%, #ffd9f2 40%);
+  color: #2e001f;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.exp .link a:hover {
+  color: #ff19be;
+}
+
+.exp .note {
+  margin-bottom: 2em;
+  color: #999;
+  font-size: 1.4rem;
+}
+
+.exp .video {
+  margin-bottom: 40px;
+}
+
+.exp .video iframe {
+  width: 100%;
+  height: 40vw;
+}
+
+.contents {
+  padding: 80px 0;
+  border-bottom: 1px solid #2e001f;
+}
+
+@media screen and (max-width: 480px) {
+  .contents {
+    padding: 60px 0;
+  }
+}
+
+.contents_head {
+  position: relative;
+  margin-bottom: 0.5em;
+  padding-bottom: 10px;
+  color: #2e001f;
+  font-size: 2.4rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.contents_head::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #ff19be, #2e001f);
+}
+
+.contents_head span {
+  display: inline-block;
+  margin-right: 0.5em;
+  font-size: 1.6rem;
+}
+
+.contents_lead {
+  margin-bottom: 1em;
+  color: #333;
+}
+
+.video-wrap {
+  max-width: 400px;
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #999;
+  text-align: center;
+}
+
+.video-wrap video {
+  width: 100%;
+  border: 1px solid #666;
+}
+
+.summary {
+  padding: 80px 0;
+  border-bottom: 1px solid #2e001f;
+}
+
+@media screen and (max-width: 480px) {
+  .summary {
+    padding: 60px 0;
+  }
+}
+
+.demo_link {
+  margin-top: 40px;
+}
+
+.demo_link a {
+  padding: 0 0.2em;
+  background: linear-gradient(transparent 40%, #ffd9f2 40%);
+  color: #2e001f;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.demo_link a:hover {
+  color: #ff19be;
+}
+
+.reference {
+  padding: 80px 0;
+}
+
+.reference li {
+  margin-bottom: 1em;
+}
+
+.reference a {
+  padding: 0 0.2em;
+  background: linear-gradient(transparent 40%, #ffd9f2 40%);
+  color: #2e001f;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.reference a:hover {
+  color: #ff19be;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 10px 20px;
+  background: #2e001f;
+}
+
+header h1 {
+  color: #fff;
+}
+
+.nav-drawer {
+  position: relative;
+}
+
+.nav-input {
+  display: none;
+}
+
+.nav-open {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.nav-open span {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background: #fff;
+  transition: .4s ease-out;
+}
+
+.nav-open span:first-of-type {
+  top: 0;
+}
+
+.nav-open span:nth-of-type(2) {
+  top: 9px;
+}
+
+.nav-open span:nth-of-type(3) {
+  top: 18px;
+}
+
+.nav-close {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  transition: .4s ease-out;
+}
+
+.nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  z-index: 9999;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background: #fff;
+  transition: .4s ease-out;
+  transform: translateX(105%);
+}
+
+.nav-content ul {
+  padding: 0 20px;
+}
+
+.nav-content li {
+  border-bottom: 1px solid #666;
+}
+
+.nav-content a {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding-top: 5px;
+  color: #333;
+  font-size: 2.4rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.nav-input:checked ~ .nav-close {
+  display: block;
+  animation: is-show 0.6s;
+}
+
+@keyframes is-show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav-input:checked ~ .nav-content {
+  transform: translateX(0%);
+}
+
+.navigation01 .nav-input:checked ~ .nav-open span:first-of-type {
+  top: 9px;
+  transform: rotate(45deg);
+}
+
+.navigation01 .nav-input:checked ~ .nav-open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.navigation01 .nav-input:checked ~ .nav-open span:nth-of-type(3) {
+  top: 9px;
+  transform: rotate(-45deg);
+}
+
+.navigation02 .nav-input:checked ~ .nav-open span:first-of-type {
+  top: 9px;
+  transform: rotate(45deg);
+}
+
+.navigation02 .nav-input:checked ~ .nav-open span:nth-of-type(2) {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.navigation02 .nav-input:checked ~ .nav-open span:nth-of-type(3) {
+  top: 9px;
+  transform: rotate(-45deg);
+}
+
+.navigation03 .nav-input:checked ~ .nav-open span:first-of-type {
+  top: 2px;
+  left: 2px;
+  transform: rotate(45deg);
+  width: calc(100% / 2 - 4px);
+}
+
+.navigation03 .nav-input:checked ~ .nav-open span:nth-of-type(2) {
+  transform: rotate(-45deg);
+}
+
+.navigation03 .nav-input:checked ~ .nav-open span:nth-of-type(3) {
+  top: auto;
+  bottom: 2px;
+  right: 2px;
+  transform: rotate(45deg);
+  width: calc(100% / 2 - 4px);
+}
+
+.navigation04 .nav-open {
+  animation: menu-close .6s;
+}
+
+.navigation04 .nav-input:checked ~ .nav-open {
+  animation: menu-open .6s;
+}
+
+.navigation04 .nav-input:checked ~ .nav-open span:first-of-type {
+  top: 9px;
+  transform: rotate(45deg);
+}
+
+.navigation04 .nav-input:checked ~ .nav-open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.navigation04 .nav-input:checked ~ .nav-open span:nth-of-type(3) {
+  top: 9px;
+  transform: rotate(-45deg);
+}
+
+@keyframes menu-close {
+  30% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes menu-open {
+  30% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.navigation05 .nav-open span:nth-of-type(2)::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background: #fff;
+  transition: .4s ease-out;
+}
+
+.navigation05 .nav-input:checked ~ .nav-open span:first-of-type {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.navigation05 .nav-input:checked ~ .nav-open span:nth-of-type(2) {
+  transform: rotate(45deg);
+}
+
+.navigation05 .nav-input:checked ~ .nav-open span:nth-of-type(2)::after {
+  transform: rotate(-90deg);
+}
+
+.navigation05 .nav-input:checked ~ .nav-open span:nth-of-type(3) {
+  transform: scale(0);
+  opacity: 0;
+}
+/*# sourceMappingURL=common.css.map */

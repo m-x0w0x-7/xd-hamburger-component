@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XD hamburger component</title>
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1 class="page_head">XDで作ったハンバーガーメニューをScssで実装する</h1>
+    <div class="exp">
+      <p>今回はJSを使わずにCSSだけでハンバーガーメニューを実装しました。</p>
+      <p>元となるXDファイルとScssファイルは下記にアップしています。<br>
+      各ハンバーガーメニューはコンポーネントになっていますのでコピペするなりアセットとして読み込むなり、ご自由にお使いください。</p>
+      <ul class="link">
+        <li><a href="https://github.com/m-x0w0x-7/xd-button-component/blob/master/button-component.xd" rel="noopener noreferrer">XDファイルはこちら</a></li>
+        <li><a href="https://github.com/m-x0w0x-7/xd-button-component/blob/master/src/scss/_button.scss" rel="noopener noreferrer">Scssはこちら</a></li>
+      </ul>
+      <p>各ボタンのXDでの動きはこんな感じ。</p>
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PmZigmp-zTc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p>ヘッダー部分のHTMLはこちら。<br>
+      <code>class="nav-drawer"</code>の後ろの<code>navigationXX</code>の数字がハンバーガーアイコンの動作ごとに変わっています。</p>
+      <div class="code">
+        <script src="https://gist.github.com/m-x0w0x-7/8598e8acf9b36f6b0ccff959b24f1452.js"></script>
+      </div>
+      <p>下記は共通のCSSです。<br>
+      ナビゲーションの開閉の動きはここで実装しています。<br>
+      ハンバーガーアイコンはそれぞれ下でまとめていますのでそちらで実装してください。</p>
+      <div class="code">
+        <script src="https://gist.github.com/m-x0w0x-7/fb9792b2ff40fdcd27c74d997ea39fe0.js"></script>
+      </div>
+    </div>
+    <section class="contents">
+      <h2 class="contents_head"><span>navigation01</span>真ん中が消えて上下の線がクロス</h2>
+      <div class="video-wrap">
+        <video src="video/navigation01.mp4" autoplay muted playsinline controls loop></video>
+      </div>
+      <div class="code">
+        <script src="https://gist.github.com/m-x0w0x-7/7b77f93b0db431a4d53ddf83878a5bbf.js"></script>
+      </div>
+      <p class="demo_link"><a href="navigation01.html" target="_blank" rel="nofollow noopener">navigation01のデモはこちら</a></p>
+    </section>
+    <section class="contents">
+      <h2 class="contents_head"><span>navigation02</span>真ん中が消えながら左に移動、上下がクロス</h2>
+      <div class="video-wrap">
+        <video src="video/navigation02.mp4" autoplay muted playsinline controls loop></video>
+      </div>
+      <div class="code">
+        <script src="https://gist.github.com/m-x0w0x-7/cf62a55027dc4eb5e26ea1b3d6e5675a.js"></script>
+      </div>
+      <p class="demo_link"><a href="navigation02.html" target="_blank" rel="nofollow noopener">navigation02のデモはこちら</a></p>
+    </section>
+    <section class="contents">
+      <h2 class="contents_head"><span>navigation03</span>上下の線が短くなりクロスに</h2>
+      <div class="video-wrap">
+        <video src="video/navigation03.mp4" autoplay muted playsinline controls loop></video>
+      </div>
+      <div class="code">
+        <script src="https://gist.github.com/m-x0w0x-7/3dfdb92decb85c172f8e62db2652f30b.js"></script>
+      </div>
+      <p class="demo_link"><a href="navigation03.html" target="_blank" rel="nofollow noopener">navigation03のデモはこちら</a></p>
+    </section>
+    <section class="contents">
+      <h2 class="contents_head"><span>navigation04</span>三本の線が小さくなりながら消え、クロスが大きくなりながら表示</h2>
+      <div class="video-wrap">
+        <video src="video/navigation04.mp4" autoplay muted playsinline controls loop></video>
+      </div>
+      <div class="code">
+        <script src="https://gist.github.com/m-x0w0x-7/2f6f2a654fb2b5d65be2944bd8c23961.js"></script>
+      </div>
+      <p class="demo_link"><a href="navigation04.html" target="_blank" rel="nofollow noopener">navigation04のデモはこちら</a></p>
+    </section>
+    <section class="contents">
+      <h2 class="contents_head"><span>navigation05</span>上下の線が消え、中央の線がクロスに</h2>
+      <div class="video-wrap">
+        <video src="video/navigation05.mp4" autoplay muted playsinline controls loop></video>
+      </div>
+      <div class="code">
+        <script src="https://gist.github.com/m-x0w0x-7/f716528821688d1be284daf5bc54b017.js"></script>
+      </div>
+      <p class="demo_link"><a href="navigation05.html" target="_blank" rel="nofollow noopener">navigation05のデモはこちら</a></p>
+    </section>
+    <section class="summary">
+      <h2 class="contents_head">まとめ</h2>
+      <p class="contents_lead">今回はXDのコンポーネントを使ったハンバーガーメニューを作ってみました。</p>
+      <p class="contents_lead">デモにはありませんが、XDファイルには左からナビが出てくるパターンと上からナビが出てくるパターンも作っています。</p>
+      <p class="contents_lead">Scssはナビゲーションの開閉をまとめているところの位置やtransformの値を調整してください。</p>
+    </section>
+    <section class="reference">
+      <h2 class="contents_head">参考サイト</h2>
+      <p class="contents_lead">今回の作成には下記サイトを参考にさせていただきました。</p>
+      <ul>
+        <li><a href="https://www.nxworld.net/tips/12-css-hamburger-menu-active-effect.html" target="_blank" rel="nofollow noopener">CSSで実装するハンバーガーメニュークリック時のエフェクト 10＋ | NxWorld</a></li>
+        <li><a href="https://saruwakakun.com/html-css/reference/nav-drawer" target="_blank" rel="nofollow noopener">CSSだけで簡単！ハンバーガーメニューの作り方（スマホ対応）</a></li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
