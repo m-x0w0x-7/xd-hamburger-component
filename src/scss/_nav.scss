@@ -1,0 +1,253 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 10px 20px;
+  background: #2e001f;
+  h1 {
+    color: #fff;
+  }
+}
+.nav-drawer {
+  position: relative;
+}
+
+// チェックボックスを非表示に
+.nav-input {
+  display:none;
+}
+
+// ハンバーガーアイコンの設定
+.nav-open {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  span {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background: #fff;
+    transition: .4s ease-out;
+    &:first-of-type {
+      top: 0;
+    }
+    &:nth-of-type(2) {
+      top: 9px;
+    }
+    &:nth-of-type(3) {
+      top: 18px;
+    }
+  }
+}
+
+
+// 背景のカバー
+.nav-close {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#000, 0.8);
+  transition: .4s ease-out;
+}
+
+// ナビゲーション
+.nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  z-index: 9999;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background: #fff;
+  transition: .4s ease-out;
+  transform: translateX(105%);
+  ul {
+    padding: 0 20px;
+  }
+  li {
+    border-bottom: 1px solid #666;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-top: 5px;
+    color: #333;
+    font-size: 2.4rem;
+    line-height: 1;
+    text-decoration: none;
+  }
+}
+
+// チェックが入ったら表示
+.nav-input:checked ~ .nav-close {
+  display: block;
+  animation: is-show 0.6s;
+  @keyframes is-show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+.nav-input:checked ~ .nav-content {
+  transform: translateX(0%);
+}
+
+// navigation01
+.navigation01 {
+  .nav-input:checked ~ .nav-open {
+    span {
+      &:first-of-type {
+        top: 9px;
+        transform: rotate(45deg);
+      }
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+      &:nth-of-type(3) {
+        top: 9px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+// navigation02
+.navigation02 {
+  .nav-input:checked ~ .nav-open {
+    span {
+      &:first-of-type {
+        top: 9px;
+        transform: rotate(45deg);
+      }
+      &:nth-of-type(2) {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      &:nth-of-type(3) {
+        top: 9px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+// navigation03
+.navigation03 {
+  .nav-input:checked ~ .nav-open {
+    span {
+      &:first-of-type {
+        top: 2px;
+        left: 2px;
+        transform: rotate(45deg);
+        width: calc(100% / 2 - 4px);
+      }
+      &:nth-of-type(2) {
+        transform: rotate(-45deg);
+      }
+      &:nth-of-type(3) {
+        top: auto;
+        bottom: 2px;
+        right: 2px;
+        transform: rotate(45deg);
+        width: calc(100% / 2 - 4px);
+      }
+    }
+  }
+}
+
+// navigation04
+.navigation04 {
+  .nav-open {
+    animation: menu-close .6s;
+  }
+  .nav-input:checked ~ .nav-open {
+    animation: menu-open .6s;
+    span {
+      &:first-of-type {
+        top: 9px;
+        transform: rotate(45deg);
+      }
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+      &:nth-of-type(3) {
+        top: 9px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  @keyframes menu-close {
+    30% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes menu-open {
+    30% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+// navigation05
+.navigation05 {
+  .nav-open {
+    span {
+      &:nth-of-type(2)::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background: #fff;
+        transition: .4s ease-out;
+      }
+    }
+  }
+  .nav-input:checked ~ .nav-open {
+    span {
+      &:first-of-type {
+        transform: scale(0);
+        opacity: 0;
+      }
+      &:nth-of-type(2) {
+        transform: rotate(45deg);
+      }
+      &:nth-of-type(2)::after {
+        transform: rotate(-90deg);
+      }
+      &:nth-of-type(3) {
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+  }
+}
