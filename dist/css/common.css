@@ -243,6 +243,26 @@ body {
   color: #ff19be;
 }
 
+.reference {
+  padding: 80px 0;
+}
+
+.reference li {
+  margin-bottom: 1em;
+}
+
+.reference a {
+  padding: 0 0.2em;
+  background: linear-gradient(transparent 40%, #ffd9f2 40%);
+  color: #2e001f;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.reference a:hover {
+  color: #ff19be;
+}
+
 header {
   display: flex;
   justify-content: space-between;
